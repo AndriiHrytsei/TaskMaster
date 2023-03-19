@@ -1,10 +1,10 @@
-const taskInput = document.querySelector(".task-input")
-const addTaskBtn = document.querySelector(".add-task-input")
-const taskList = document.querySelector(".task-list")
-const taskForm = document.querySelector(".task-page-form")
+export const taskInput = document.querySelector(".task-input")
+export const addTaskBtn = document.querySelector(".add-task-input")
+export const taskList = document.querySelector(".task-list")
+export const taskForm = document.querySelector(".task-page-form")
 
 
-const addTaskOnClick = (e) => {
+export const addTaskOnClick = (e) => {
     e.preventDefault();
     if (taskInput.value.trim() !== ""){
         taskList.insertAdjacentHTML("afterbegin", 
@@ -39,4 +39,3 @@ const addTaskOnClick = (e) => {
 
 
 
-taskForm.addEventListener("submit", addTaskOnClick)
