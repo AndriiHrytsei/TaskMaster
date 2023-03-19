@@ -18,8 +18,10 @@
   "bugs": {
     "url": "https://github.com/AndriiHrytsei/TaskMaster/issues"
   },
-  
   "devDependencies": {
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
