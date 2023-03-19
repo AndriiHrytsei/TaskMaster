@@ -21,10 +21,9 @@ export const addTaskOnClick = (e) => {
             task.removeAttribute("readonly")
             task.focus()
         }
-
         const saveOnChange = () => {
             task.setAttribute("readonly", "")
-        }
+        }   
 
         const deleteOnClick = () => {
             taskContainer.style.display = "none"
