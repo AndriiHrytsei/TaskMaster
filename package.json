@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/AndriiHrytsei/TaskMaster/issues"
   },
-  "homepage": "https://github.com/AndriiHrytsei/TaskMaster",
+  "homepage": "https://github.com/AndriiHrytsei/TaskMaster/src/index.html",
   "devDependencies": {
     "parcel": "^2.8.3"
   }
