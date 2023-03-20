@@ -21,8 +21,10 @@ export const addTaskOnClick = (e) => {
             task.removeAttribute("readonly")
             task.focus()
         }
-        const saveOnChange = () => {
-            task.setAttribute("readonly", "")
+        const saveOnChange = (e) => {
+            if (e.key === "Enter"){
+                task.setAttribute("readonly", "")
+            }
         }   
 
         const deleteOnClick = () => {
@@ -31,7 +33,7 @@ export const addTaskOnClick = (e) => {
         
         deleteBtn.addEventListener("click", deleteOnClick)
         editBtn.addEventListener("click", editOnClick)
-        task.addEventListener("change", saveOnChange)
+        task.addEventListener("keypress", saveOnChange)
     }
 }
 
