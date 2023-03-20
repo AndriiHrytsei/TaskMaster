@@ -13,10 +13,14 @@ export const addTaskOnClick = (e) => {
             <button class = "edit" type = "button">Edit</button>
             <button class = "delete" type = "button">Delete</button>
         </li>`)
+
+
         const editBtn = document.querySelector(".edit")
         const deleteBtn = document.querySelector(".delete")
         const task = document.querySelector(".task")
         const taskContainer = document.querySelector(".task-container")
+
+        
         const editOnClick = () => {
             task.removeAttribute("readonly")
             task.focus()

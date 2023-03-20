@@ -19,10 +19,13 @@
         color: #fff;
     }
     .task-list{
+        display: flex;
+        align-items: center;
         text-align: center;
         width: 100%;
         height: 200px;
         overflow-y: scroll;
+        flex-direction: column;
     }
 }
 .task-input{
@@ -41,4 +44,19 @@
     border: 1px solid #228B22;
     border-radius: 8px;
     color: #fff;
+}
+.task-container {
+    display: flex;
+    align-items: center;
+    background-color: #3c1361;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    .task{
+        width: 170px;
+        margin-right: 10px;
+        background-color: #3c1361;
+        border: 0;
+        color: #fff;
+    }
 }
