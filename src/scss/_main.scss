@@ -5,10 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Roboto";
     .task-page-heading {
         color: #fff;
-        margin-right: 240px;
+        margin-right: 200px;
         margin-bottom: 10px;
+        @media screen and (min-width: 480px) {
+            margin-right: 230px;
+        }
     }
     .task-list-heading{
         margin-right: 210px;
@@ -30,18 +34,21 @@
     background-color: #7F00FF;
     border: 1px solid #7F00FF;
     height: 30px;
-    width: 280px;
+    width: 240px;
     border-radius: 8px;
     color: #fff;
     padding-left: 20px;
+    @media screen and (min-width:480px) {
+        width: 280px;
+    }
 }
 .add-task-input{
-    background-color: #2ac22a;
+    background-color: transparent;
     height: 32px;
     width: 50px;
-    border: 1px solid #228B22;
     border-radius: 8px;
-    color: #fff;
+    color: #2ac22a;
+    border: none;
 }
 .task-container {
     display: flex;
@@ -59,8 +66,8 @@
         color: #fff;
     }
     .edit{
-        color: #fff;
-        background-color: #ffaa00;
+        color: rgb(255, 183, 0);
+        background-color: transparent;
         border: none;
         width: 44px;
         height: 25px;
@@ -68,8 +75,8 @@
         margin-right: 5px;
     }
     .delete{
-        color: #fff;
-        background-color: #ff0000;
+        color: #ff0000;
+        background-color: transparent;
         border: none;
         width: 44px;
         height: 25px;
