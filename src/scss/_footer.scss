@@ -1,0 +1,14 @@
+footer{
+    height: 10vh
+}
+.copyright{
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    text-decoration: underline;
+}
+
+.copyright::before{
+    content: "©";
+    color: #fff;
+}
