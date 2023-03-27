@@ -11,7 +11,7 @@ export const addTaskOnClick = (e) => {
         `<li class = "task-container">
             <input class = "task" type="text" value = "${taskInput.value}" readonly>
             <button class = "edit" type = "button">Edit</button>
-            <button class = "delete" type = "button">Delete</button>
+            <button class = "delete" type = "button">Remove</button>
         </li>`)
 
 
