@@ -14,13 +14,13 @@ export const addTaskOnClick = (e) => {
             <button class = "delete" type = "button">Remove</button>
         </li>`)
 
+        taskInput.value = ""
 
         const editBtn = document.querySelector(".edit")
         const deleteBtn = document.querySelector(".delete")
         const task = document.querySelector(".task")
         const taskContainer = document.querySelector(".task-container")
 
-        
         const editOnClick = () => {
             task.removeAttribute("readonly")
             task.focus()
@@ -34,7 +34,6 @@ export const addTaskOnClick = (e) => {
         const deleteOnClick = () => {
             taskContainer.style.display = "none"
         }
-        
         deleteBtn.addEventListener("click", deleteOnClick)
         editBtn.addEventListener("click", editOnClick)
         task.addEventListener("keypress", saveOnChange)
