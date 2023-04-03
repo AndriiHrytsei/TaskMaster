@@ -22,7 +22,7 @@ export const addTaskOnClick = (e) => {
 
 
         deleteBtn.addEventListener("click", () => {
-            taskContainer.style.display = "none"
+            taskList.removeChild(taskContainer)
         })
         editBtn.addEventListener("click", () => {
             task.removeAttribute("readonly")
