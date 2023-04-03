@@ -13,7 +13,6 @@ export const addTaskOnClick = (e) => {
             <button class = "edit" type = "button">Edit</button>
             <button class = "delete" type = "button">Remove</button>
         </li>`)
-
         taskInput.value = ""
 
         const editBtn = document.querySelector(".edit")
@@ -21,22 +20,19 @@ export const addTaskOnClick = (e) => {
         const task = document.querySelector(".task")
         const taskContainer = document.querySelector(".task-container")
 
-        const editOnClick = () => {
+
+        deleteBtn.addEventListener("click", () => {
+            taskContainer.style.display = "none"
+        })
+        editBtn.addEventListener("click", () => {
             task.removeAttribute("readonly")
             task.focus()
-        }
-        const saveOnChange = (e) => {
+        })
+        task.addEventListener("keypress", (e) => {
             if (e.key === "Enter"){
                 task.setAttribute("readonly", "")
             }
-        }   
-
-        const deleteOnClick = () => {
-            taskContainer.style.display = "none"
-        }
-        deleteBtn.addEventListener("click", deleteOnClick)
-        editBtn.addEventListener("click", editOnClick)
-        task.addEventListener("keypress", saveOnChange)
+        })
     }
 }
 
