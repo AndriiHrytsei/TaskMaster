@@ -1,11 +1,24 @@
+// Get DOM elements
 export const taskInput = document.querySelector(".task-input")
 export const addTaskBtn = document.querySelector(".add-task-input")
 export const taskList = document.querySelector(".task-list")
-export const taskForm = document.querySelector(".task-page-form")
+export const taskForm = document.querySelector(".task-form")
 
 
-export const addTaskOnClick = (e) => {
-    e.preventDefault();
+// Save and load tasks to local storage 
+
+export const saveToLocalStorage = () => {
+    localStorage.setItem("tasks", taskList.innerHTML)
+}
+
+export const loadFromLocalStorage = () => {
+    taskList.innerHTML = localStorage.getItem("tasks")
+}
+
+
+// Add tasks function
+
+export const addTaskOnClick = () => {
     if (taskInput.value.trim() !== ""){
         taskList.insertAdjacentHTML("afterbegin", 
         `<li class = "task-container">
@@ -14,28 +27,40 @@ export const addTaskOnClick = (e) => {
             <button class = "delete" type = "button">Remove</button>
         </li>`)
         taskInput.value = ""
-
-        const editBtn = document.querySelector(".edit")
-        const deleteBtn = document.querySelector(".delete")
-        const task = document.querySelector(".task")
-        const taskContainer = document.querySelector(".task-container")
-
-
-        deleteBtn.addEventListener("click", () => {
-            taskList.removeChild(taskContainer)
-        })
-        editBtn.addEventListener("click", () => {
-            task.removeAttribute("readonly")
-            task.focus()
-        })
-        task.addEventListener("keypress", (e) => {
-            if (e.key === "Enter"){
-                task.setAttribute("readonly", "")
-            }
-        })
+        saveToLocalStorage()
     }
 }
 
 
+// Delete task function
+
+export const deleteTask = (index) => {
+    const taskContainers = document.querySelectorAll(".task-container")
+    taskList.removeChild(taskContainers[index])
+}
+
+
+// Edit task function
+
+export const editTask = (index) => {
+    const tasks = document.querySelectorAll(".task")
+    tasks[index].removeAttribute("readonly")
+    tasks[index].focus()
+}
+
+// Save edited tasks function
+
+export const saveEditedTasks = () => {
+    const tasks = document.querySelectorAll(".task")
+    tasks.forEach((task) => {
+        task.addEventListener("keypress", (e)=>{
+            if (e.key === "Enter"){
+                task.setAttribute("readonly", "")
+                localStorage.setItem("taskValue", task.value)
+                saveToLocalStorage()
+            }
+        })
+    })
+}
 
 
