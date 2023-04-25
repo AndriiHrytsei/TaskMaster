@@ -56,11 +56,9 @@ export const saveEditedTasks = () => {
         task.addEventListener("keypress", (e)=>{
             if (e.key === "Enter"){
                 task.setAttribute("readonly", "")
-                localStorage.setItem("taskValue", task.value)
                 saveToLocalStorage()
             }
         })
     })
 }
-
 

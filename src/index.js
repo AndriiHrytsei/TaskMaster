@@ -18,8 +18,6 @@ addTaskScript.taskList.addEventListener("click", (e)=> {
     editBtns.forEach((editBtn, index) => {
         if (e.target === editBtn){
             addTaskScript.editTask(index)
-            localStorage.getItem("taskValue")
-            addTaskScript.saveEditedTasks()
         }
     })
 })
