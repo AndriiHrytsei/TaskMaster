@@ -8,18 +8,20 @@
     font-family: "Roboto";
     .task-heading {
         color: #fff;
-        margin-right: 200px;
+        margin-right: 190px;
         margin-bottom: 10px;
         @media screen and (min-width: 480px) {
             margin-right: 300px;
         }
     }
     .task-list-heading{
-        margin-right: 210px;
+        margin-right: 230px;
         margin-top: 10px;
         margin-bottom: 10px;
         color: #fff;
-        
+        @media screen and (min-width:480px) {
+            margin-right: 330px;
+        }
     }
     .task-list{
         display: flex;
