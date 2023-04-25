@@ -11,7 +11,7 @@
         margin-right: 200px;
         margin-bottom: 10px;
         @media screen and (min-width: 480px) {
-            margin-right: 230px;
+            margin-right: 300px;
         }
     }
     .task-list-heading{
@@ -19,6 +19,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         color: #fff;
+        
     }
     .task-list{
         display: flex;
@@ -67,7 +68,7 @@
         color: #fff;
         font-size: 15px;
         @media screen and (min-width:480px) {
-            margin-right: 100px;
+            margin-right: 110px;
         }
     }
     .edit{
