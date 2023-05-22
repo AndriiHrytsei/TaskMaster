@@ -27,6 +27,7 @@ export const addTaskOnClick = () => {
             <button class = "delete" type = "button">Remove</button>
         </li>`)
         taskInput.value = ""
+        taskInput.blur()
         saveToLocalStorage()
     }
 }
